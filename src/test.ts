@@ -6,18 +6,23 @@
 function findLargestSumOfDigits(arr: string[]): number {
     let maxSum = 0;
 
+    // Iterate through each string in the array
     for (let i = 0; i < arr.length; i++) {
         let currentSum = 0;
         const str = arr[i];
 
+        // Iterate through each character in the string
         for (let j = 0; j < str.length; j++) {
             const char = str[j];
+           
+            // Check if the character is a digit
+            if (char >= '0' && char <= '9') {      
 
-            if (char >= '0' && char <= '9') {           
+               // Convert the character to a number and add it to the current sum   
                 currentSum += Number(char);
         }
     }
-
+    // Update the maximum sum if the current sum is greater
     if (currentSum > maxSum) {
         maxSum = currentSum;
     }
