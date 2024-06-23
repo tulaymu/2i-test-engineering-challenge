@@ -17,7 +17,6 @@ function findLargestSumOfDigits(arr: string[]): number {
            
             // Check if the character is a digit
             if (char >= '0' && char <= '9') {      
-
                // Convert the character to a number and add it to the current sum   
                 currentSum += Number(char);
         }
